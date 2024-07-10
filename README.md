@@ -18,7 +18,7 @@ Este repositório contém um script Python para escanear dispositivos Bluetooth 
 2. Crie um ambiente virtual (opcional, mas recomendado):
     ```bash
         python -m venv venv
-        source venv/bin/activate  # No Windows use `venv\Scripts\activate`
+        source venv/bin/activate  # No Windows use venv\Scripts\activate
     ```
 
 3. Instale as dependências:
