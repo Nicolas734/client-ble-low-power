@@ -2,7 +2,7 @@ import asyncio
 from bleak import BleakClient, BleakScanner
 from struct import pack
 
-BLE_NAME = "ESP32"
+DEVICE_NAME = ""
 SERVICE_UUID = "19b10000-e8f2-537e-4f6c-d104768a1214"
 SENSOR_CHARACTERISTIC_UUID = "19b10001-e8f2-537e-4f6c-d104768a1214"
 LED_CHARACTERISTIC_UUID = "19b10002-e8f2-537e-4f6c-d104768a1214"
@@ -32,7 +32,7 @@ async def main():
             global esp_device
             esp_device = None
             for device in devices:
-                if device.name == BLE_NAME:
+                if device.name == DEVICE_NAME:
                     esp_device = device
 
             if esp_device is not None:
@@ -54,7 +54,7 @@ async def main():
                     print("Fail to connect")
                     print(e)
             else:
-                print(f"Device {BLE_NAME} não encontrado")
+                print(f"Device {DEVICE_NAME} não encontrado")
         else:
             print("Nenhum dispositivo encontrado")
 
